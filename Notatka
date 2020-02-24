@@ -1,0 +1,63 @@
+#include <iostream>
+#include <string>
+#include <conio.h>
+
+using namespace std;
+
+//10 rekordow 
+// uzuplenianie danych
+// wyswietlenie danych
+// srednia z wszystkich przedmiotow ucznia
+// srednia poszczegolnego przedmiotu
+
+int test;
+
+class Uczen{
+	public:
+		string Imie;
+		string Nazwisko;
+		string Klasa;
+		int MatOceny[20];
+		int PrzyrodaOceny[20];
+		int PolskiOceny[20];
+		int AngOceny[20];
+		int WFOceny[20];
+		int Uzupelnienie();
+};
+		int Uczen::Uzupelnienie(){
+			cout << "Podaj imie: " << endl;
+			cin >> Imie; 
+			cout << "Podaj nazwisko: " << endl;
+			cin >> Nazwisko;
+			cout << "Podaj klase: " << endl;
+			cin >> Klasa;
+			for(int i = 0;i < 20; i++){
+				cout << "Jesli chcesz wprowadzic ocene wybierz 1, jesli nie wybierz 2: " << endl;
+				cin >> test;
+				if(test == 2){
+					return 0;
+				}
+				cout << "Podaj" << i << "ocene z przedmiotu matematyka: " << endl;
+				cin >> MatOceny[i]; 
+			}
+		}
+	//	int Wyswietlenie(string Imie, string Nazwisko, string Klasa){
+			
+		
+	//	float SredniaWszystk(string Imie, string Nazwisko, string Klasa){
+			
+		
+		//float SredniaKonkret(string Imie, string Nazwisko, string Klasa, string Przedmiot){
+			
+		
+			
+
+
+
+int main(int argc, char** argv) {
+	Uczen uczen1; 
+	uczen1.Uzupelnienie();
+	
+	
+	return 0;
+}
